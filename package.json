@@ -1,0 +1,25 @@
+{
+  "name": "lakshupkg",
+  "version": "1.0.0",
+  "description": "Very important npm package ok",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/cjs/index.d.ts",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "test": "npm run test",
+    "build": "npm run clean && npx tsc -p tsconfig.json && npx tsc -p tsconfig-cjs.json",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "lak shu",
+    "koseng"
+  ],
+  "author": "Kuban Harri",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
