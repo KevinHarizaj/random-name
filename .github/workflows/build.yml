@@ -8,10 +8,13 @@ on:
 strategy:
   matrix:
     node: [10, 12, 14]
-steps:
-  - uses: actions/setup-node@v3
-    with:
-      node-version: ${{ matrix.node }}
-  - run: npm install
-  - run: npm run build
-  - run: npm run test
+
+jobs:
+  building:
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm run build
+      - run: npm run test
