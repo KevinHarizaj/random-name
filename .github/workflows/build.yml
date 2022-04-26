@@ -5,12 +5,11 @@ on:
     branches:
       - main
 
-strategy:
-  matrix:
-    node: [10, 12, 14]
-
 jobs:
   building:
+    strategy:
+      matrix:
+        node: [10, 12, 14]
     steps:
       - uses: actions/setup-node@v3
         with:
